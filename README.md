@@ -10,7 +10,7 @@
 import { createCalendarStore } from "ts-calendar-store";
 ```
 
-## 2(optional). Define EventData type
+## 2. (optional) Define EventData type
 
 ```ts
 type EventData = {
