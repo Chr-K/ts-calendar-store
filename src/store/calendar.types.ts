@@ -2,8 +2,10 @@ export type CalendarView = "month" | "week" | "day";
 
 export type CalendarEvent<T = unknown> = {
   id: string;
+  title: string;
   start: Date;
   end: Date;
+  calendars?: Array<Calendar> | Calendar;
   data?: T;
 };
 
@@ -12,6 +14,11 @@ export interface CalendarState {
   selectedDate: Date | null;
   view: CalendarView;
   events: Array<CalendarEvent>;
+}
+
+export interface Calendar {
+  title: string;
+  id: string;
 }
 
 export interface CalendarActions {
